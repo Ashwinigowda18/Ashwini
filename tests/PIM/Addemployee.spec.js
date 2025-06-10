@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-import data from "../testData/Addemployee.json"
+import data from "../../testData/Addemployee.json"
 
-import logindata from "../testData/login.json"
+import logindata from "../../testData/login.json"
 
 test('Verify Add Employee', async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
