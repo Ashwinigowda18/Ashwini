@@ -1,0 +1,331 @@
+{
+  "config": {
+    "configFile": "D:\\Ashwini Playwright\\playwright.config.js",
+    "rootDir": "D:/Ashwini Playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/Ashwini Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Ashwini Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Ashwini Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Ashwini Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Ashwini Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Microsoft Edge",
+        "name": "Microsoft Edge",
+        "testDir": "D:/Ashwini Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Ashwini Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Google Chrome",
+        "name": "Google Chrome",
+        "testDir": "D:/Ashwini Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.52.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Addjobtitle(env).spec.js",
+      "file": "Addjobtitle(env).spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Add Job Title Feature",
+          "file": "Addjobtitle(env).spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should add a new job title successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 71046,
+                      "error": {
+                        "message": "Error: locator.fill: value: expected string, got undefined",
+                        "stack": "Error: locator.fill: value: expected string, got undefined\n    at D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js:22:98",
+                        "location": {
+                          "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                          "column": 98,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space(text())='Job Titles']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[class='oxd-button oxd-button--medium oxd-button--secondary']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Job Title']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobtitle)\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//textarea[@placeholder='Type description here']\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobDescription)\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 25 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                            "column": 98,
+                            "line": 22
+                          },
+                          "message": "Error: locator.fill: value: expected string, got undefined\n\n\u001b[0m \u001b[90m 20 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space(text())='Job Titles']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[class='oxd-button oxd-button--medium oxd-button--secondary']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Job Title']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobtitle)\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//textarea[@placeholder='Type description here']\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobDescription)\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 25 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js:22:98\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-11T16:09:59.380Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "_error-context",
+                          "contentType": "application/json",
+                          "body": "eyJwYWdlU25hcHNob3QiOiItIGNvbXBsZW1lbnRhcnk6XG4gIC0gbmF2aWdhdGlvbiBcIlNpZGVwYW5lbFwiOlxuICAgIC0gbGluayBcImNsaWVudCBicmFuZCBiYW5uZXJcIjpcbiAgICAgIC0gL3VybDogaHR0cHM6Ly93d3cub3JhbmdlaHJtLmNvbS9cbiAgICAgIC0gaW1nIFwiY2xpZW50IGJyYW5kIGJhbm5lclwiXG4gICAgLSB0ZXh0Ym94IFwiU2VhcmNoXCJcbiAgICAtIGJ1dHRvbiBcIu+KhFwiXG4gICAgLSBzZXBhcmF0b3JcbiAgICAtIGxpc3Q6XG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJBZG1pblwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvYWRtaW4vdmlld0FkbWluTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJQSU1cIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BpbS92aWV3UGltTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJMZWF2ZVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvbGVhdmUvdmlld0xlYXZlTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJUaW1lXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC90aW1lL3ZpZXdUaW1lTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJSZWNydWl0bWVudFwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvcmVjcnVpdG1lbnQvdmlld1JlY3J1aXRtZW50TW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJNeSBJbmZvXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9waW0vdmlld015RGV0YWlsc1xuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUGVyZm9ybWFuY2VcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BlcmZvcm1hbmNlL3ZpZXdQZXJmb3JtYW5jZU1vZHVsZVxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiRGFzaGJvYXJkXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9kYXNoYm9hcmQvaW5kZXhcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkRpcmVjdG9yeVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvZGlyZWN0b3J5L3ZpZXdEaXJlY3RvcnlcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIk1haW50ZW5hbmNlXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9tYWludGVuYW5jZS92aWV3TWFpbnRlbmFuY2VNb2R1bGVcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkNsYWltXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9jbGFpbS92aWV3Q2xhaW1Nb2R1bGVcbiAgICAgICAgICAtIGltZ1xuICAgICAgICAgIC0gdGV4dDogQ2xhaW1cbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkJ1enpcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL2J1enovdmlld0J1enpcbi0gYmFubmVyOlxuICAtIGhlYWRpbmcgXCJBZG1pblwiIFtsZXZlbD02XVxuICAtIGxpbmsgXCJVcGdyYWRlXCI6XG4gICAgLSAvdXJsOiBodHRwczovL29yYW5nZWhybS5jb20vb3Blbi1zb3VyY2UvdXBncmFkZS10by1hZHZhbmNlZFxuICAgIC0gYnV0dG9uIFwiVXBncmFkZVwiXG4gIC0gbGlzdDpcbiAgICAtIGxpc3RpdGVtOlxuICAgICAgLSBpbWcgXCJwcm9maWxlIHBpY3R1cmVcIlxuICAgICAgLSBwYXJhZ3JhcGg6IG1hbmRhIHVzZXJcbiAgICAgIC0gdGV4dDog74ipXG4gIC0gbmF2aWdhdGlvbiBcIlRvcGJhciBNZW51XCI6XG4gICAgLSBsaXN0OlxuICAgICAgLSBsaXN0aXRlbTogVXNlciBNYW5hZ2VtZW50IO+KglxuICAgICAgLSBsaXN0aXRlbTogSm9iIO+KglxuICAgICAgLSBsaXN0aXRlbTogT3JnYW5pemF0aW9uIO+KglxuICAgICAgLSBsaXN0aXRlbTogUXVhbGlmaWNhdGlvbnMg74qCXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJOYXRpb25hbGl0aWVzXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiQ29ycG9yYXRlIEJyYW5kaW5nXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTogQ29uZmlndXJhdGlvbiDvioJcbiAgICAgIC0gYnV0dG9uIFwi75mOXCJcbi0gaGVhZGluZyBcIkFkZCBKb2IgVGl0bGVcIiBbbGV2ZWw9Nl1cbi0gc2VwYXJhdG9yXG4tIHRleHQ6IEpvYiBUaXRsZSpcbi0gdGV4dGJveFxuLSB0ZXh0OiBKb2IgRGVzY3JpcHRpb25cbi0gdGV4dGJveCBcIlR5cGUgZGVzY3JpcHRpb24gaGVyZVwiXG4tIHRleHQ6IEpvYiBTcGVjaWZpY2F0aW9uXG4tIGJ1dHRvbiBcIkNob29zZSBGaWxlXCJcbi0gdGV4dDogQnJvd3NlIE5vIGZpbGUgY2hvc2VuIO+Yg1xuLSBwYXJhZ3JhcGg6IEFjY2VwdHMgdXAgdG8gMU1CXG4tIHRleHQ6IO+TiiBOb3RlXG4tIHRleHRib3ggXCJBZGQgbm90ZVwiXG4tIHNlcGFyYXRvclxuLSBwYXJhZ3JhcGg6IFwiKiBSZXF1aXJlZFwiXG4tIGJ1dHRvbiBcIkNhbmNlbFwiXG4tIGJ1dHRvbiBcIlNhdmVcIlxuLSBwYXJhZ3JhcGg6IE9yYW5nZUhSTSBPUyA1Ljdcbi0gcGFyYWdyYXBoOlxuICAtIHRleHQ6IMKpIDIwMDUgLSAyMDI1XG4gIC0gbGluayBcIk9yYW5nZUhSTSwgSW5jXCI6XG4gICAgLSAvdXJsOiBodHRwOi8vd3d3Lm9yYW5nZWhybS5jb21cbiAgLSB0ZXh0OiAuIEFsbCByaWdodHMgcmVzZXJ2ZWQuIn0="
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                        "column": 98,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5aeb3738ba283744b820-4457f45a38c5feef69bf",
+              "file": "Addjobtitle(env).spec.js",
+              "line": 5,
+              "column": 5
+            },
+            {
+              "title": "should add a new job title successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Microsoft Edge",
+                  "projectName": "Microsoft Edge",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 81633,
+                      "error": {
+                        "message": "Error: locator.fill: value: expected string, got undefined",
+                        "stack": "Error: locator.fill: value: expected string, got undefined\n    at D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js:22:98",
+                        "location": {
+                          "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                          "column": 98,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space(text())='Job Titles']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[class='oxd-button oxd-button--medium oxd-button--secondary']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Job Title']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobtitle)\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//textarea[@placeholder='Type description here']\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobDescription)\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 25 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                            "column": 98,
+                            "line": 22
+                          },
+                          "message": "Error: locator.fill: value: expected string, got undefined\n\n\u001b[0m \u001b[90m 20 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space(text())='Job Titles']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[class='oxd-button oxd-button--medium oxd-button--secondary']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Job Title']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobtitle)\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//textarea[@placeholder='Type description here']\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobDescription)\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 25 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js:22:98\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-11T16:11:32.329Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "_error-context",
+                          "contentType": "application/json",
+                          "body": "eyJwYWdlU25hcHNob3QiOiItIGNvbXBsZW1lbnRhcnk6XG4gIC0gbmF2aWdhdGlvbiBcIlNpZGVwYW5lbFwiOlxuICAgIC0gbGluayBcImNsaWVudCBicmFuZCBiYW5uZXJcIjpcbiAgICAgIC0gL3VybDogaHR0cHM6Ly93d3cub3JhbmdlaHJtLmNvbS9cbiAgICAgIC0gaW1nIFwiY2xpZW50IGJyYW5kIGJhbm5lclwiXG4gICAgLSB0ZXh0Ym94IFwiU2VhcmNoXCJcbiAgICAtIGJ1dHRvbiBcIu+KhFwiXG4gICAgLSBzZXBhcmF0b3JcbiAgICAtIGxpc3Q6XG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJBZG1pblwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvYWRtaW4vdmlld0FkbWluTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJQSU1cIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BpbS92aWV3UGltTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJMZWF2ZVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvbGVhdmUvdmlld0xlYXZlTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJUaW1lXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC90aW1lL3ZpZXdUaW1lTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJSZWNydWl0bWVudFwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvcmVjcnVpdG1lbnQvdmlld1JlY3J1aXRtZW50TW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJNeSBJbmZvXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9waW0vdmlld015RGV0YWlsc1xuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUGVyZm9ybWFuY2VcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BlcmZvcm1hbmNlL3ZpZXdQZXJmb3JtYW5jZU1vZHVsZVxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiRGFzaGJvYXJkXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9kYXNoYm9hcmQvaW5kZXhcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkRpcmVjdG9yeVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvZGlyZWN0b3J5L3ZpZXdEaXJlY3RvcnlcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIk1haW50ZW5hbmNlXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9tYWludGVuYW5jZS92aWV3TWFpbnRlbmFuY2VNb2R1bGVcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkNsYWltXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9jbGFpbS92aWV3Q2xhaW1Nb2R1bGVcbiAgICAgICAgICAtIGltZ1xuICAgICAgICAgIC0gdGV4dDogQ2xhaW1cbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkJ1enpcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL2J1enovdmlld0J1enpcbi0gYmFubmVyOlxuICAtIGhlYWRpbmcgXCJBZG1pblwiIFtsZXZlbD02XVxuICAtIGxpbmsgXCJVcGdyYWRlXCI6XG4gICAgLSAvdXJsOiBodHRwczovL29yYW5nZWhybS5jb20vb3Blbi1zb3VyY2UvdXBncmFkZS10by1hZHZhbmNlZFxuICAgIC0gYnV0dG9uIFwiVXBncmFkZVwiXG4gIC0gbGlzdDpcbiAgICAtIGxpc3RpdGVtOlxuICAgICAgLSBpbWcgXCJwcm9maWxlIHBpY3R1cmVcIlxuICAgICAgLSBwYXJhZ3JhcGg6IG1hbmRhIHVzZXJcbiAgICAgIC0gdGV4dDog74ipXG4gIC0gbmF2aWdhdGlvbiBcIlRvcGJhciBNZW51XCI6XG4gICAgLSBsaXN0OlxuICAgICAgLSBsaXN0aXRlbTogVXNlciBNYW5hZ2VtZW50IO+KglxuICAgICAgLSBsaXN0aXRlbTogSm9iIO+KglxuICAgICAgLSBsaXN0aXRlbTogT3JnYW5pemF0aW9uIO+KglxuICAgICAgLSBsaXN0aXRlbTogUXVhbGlmaWNhdGlvbnMg74qCXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJOYXRpb25hbGl0aWVzXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiQ29ycG9yYXRlIEJyYW5kaW5nXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTogQ29uZmlndXJhdGlvbiDvioJcbiAgICAgIC0gYnV0dG9uIFwi75mOXCJcbi0gaGVhZGluZyBcIkFkZCBKb2IgVGl0bGVcIiBbbGV2ZWw9Nl1cbi0gc2VwYXJhdG9yXG4tIHRleHQ6IEpvYiBUaXRsZSpcbi0gdGV4dGJveFxuLSB0ZXh0OiBKb2IgRGVzY3JpcHRpb25cbi0gdGV4dGJveCBcIlR5cGUgZGVzY3JpcHRpb24gaGVyZVwiXG4tIHRleHQ6IEpvYiBTcGVjaWZpY2F0aW9uXG4tIGJ1dHRvbiBcIkNob29zZSBGaWxlXCJcbi0gdGV4dDogQnJvd3NlIE5vIGZpbGUgY2hvc2VuIO+Yg1xuLSBwYXJhZ3JhcGg6IEFjY2VwdHMgdXAgdG8gMU1CXG4tIHRleHQ6IO+TiiBOb3RlXG4tIHRleHRib3ggXCJBZGQgbm90ZVwiXG4tIHNlcGFyYXRvclxuLSBwYXJhZ3JhcGg6IFwiKiBSZXF1aXJlZFwiXG4tIGJ1dHRvbiBcIkNhbmNlbFwiXG4tIGJ1dHRvbiBcIlNhdmVcIlxuLSBwYXJhZ3JhcGg6IE9yYW5nZUhSTSBPUyA1Ljdcbi0gcGFyYWdyYXBoOlxuICAtIHRleHQ6IMKpIDIwMDUgLSAyMDI1XG4gIC0gbGluayBcIk9yYW5nZUhSTSwgSW5jXCI6XG4gICAgLSAvdXJsOiBodHRwOi8vd3d3Lm9yYW5nZWhybS5jb21cbiAgLSB0ZXh0OiAuIEFsbCByaWdodHMgcmVzZXJ2ZWQuIn0="
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                        "column": 98,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5aeb3738ba283744b820-e6bb2b17cf18069cad95",
+              "file": "Addjobtitle(env).spec.js",
+              "line": 5,
+              "column": 5
+            },
+            {
+              "title": "should add a new job title successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 73520,
+                      "error": {
+                        "message": "Error: locator.fill: value: expected string, got undefined",
+                        "stack": "Error: locator.fill: value: expected string, got undefined\n    at D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js:22:98",
+                        "location": {
+                          "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                          "column": 98,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space(text())='Job Titles']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[class='oxd-button oxd-button--medium oxd-button--secondary']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Job Title']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobtitle)\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//textarea[@placeholder='Type description here']\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobDescription)\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 25 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                            "column": 98,
+                            "line": 22
+                          },
+                          "message": "Error: locator.fill: value: expected string, got undefined\n\n\u001b[0m \u001b[90m 20 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space(text())='Job Titles']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[class='oxd-button oxd-button--medium oxd-button--secondary']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Job Title']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobtitle)\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//textarea[@placeholder='Type description here']\"\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mjobDescription)\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 25 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js:22:98\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-11T16:13:21.747Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "_error-context",
+                          "contentType": "application/json",
+                          "body": "eyJwYWdlU25hcHNob3QiOiItIGNvbXBsZW1lbnRhcnk6XG4gIC0gbmF2aWdhdGlvbiBcIlNpZGVwYW5lbFwiOlxuICAgIC0gbGluayBcImNsaWVudCBicmFuZCBiYW5uZXJcIjpcbiAgICAgIC0gL3VybDogaHR0cHM6Ly93d3cub3JhbmdlaHJtLmNvbS9cbiAgICAgIC0gaW1nIFwiY2xpZW50IGJyYW5kIGJhbm5lclwiXG4gICAgLSB0ZXh0Ym94IFwiU2VhcmNoXCJcbiAgICAtIGJ1dHRvbiBcIu+KhFwiXG4gICAgLSBzZXBhcmF0b3JcbiAgICAtIGxpc3Q6XG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJBZG1pblwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvYWRtaW4vdmlld0FkbWluTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJQSU1cIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BpbS92aWV3UGltTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJMZWF2ZVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvbGVhdmUvdmlld0xlYXZlTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJUaW1lXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC90aW1lL3ZpZXdUaW1lTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJSZWNydWl0bWVudFwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvcmVjcnVpdG1lbnQvdmlld1JlY3J1aXRtZW50TW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJNeSBJbmZvXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9waW0vdmlld015RGV0YWlsc1xuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUGVyZm9ybWFuY2VcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BlcmZvcm1hbmNlL3ZpZXdQZXJmb3JtYW5jZU1vZHVsZVxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiRGFzaGJvYXJkXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9kYXNoYm9hcmQvaW5kZXhcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkRpcmVjdG9yeVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvZGlyZWN0b3J5L3ZpZXdEaXJlY3RvcnlcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIk1haW50ZW5hbmNlXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9tYWludGVuYW5jZS92aWV3TWFpbnRlbmFuY2VNb2R1bGVcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkNsYWltXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9jbGFpbS92aWV3Q2xhaW1Nb2R1bGVcbiAgICAgICAgICAtIGltZ1xuICAgICAgICAgIC0gdGV4dDogQ2xhaW1cbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkJ1enpcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL2J1enovdmlld0J1enpcbi0gYmFubmVyOlxuICAtIGhlYWRpbmcgXCJBZG1pblwiIFtsZXZlbD02XVxuICAtIGxpbmsgXCJVcGdyYWRlXCI6XG4gICAgLSAvdXJsOiBodHRwczovL29yYW5nZWhybS5jb20vb3Blbi1zb3VyY2UvdXBncmFkZS10by1hZHZhbmNlZFxuICAgIC0gYnV0dG9uIFwiVXBncmFkZVwiXG4gIC0gbGlzdDpcbiAgICAtIGxpc3RpdGVtOlxuICAgICAgLSBpbWcgXCJwcm9maWxlIHBpY3R1cmVcIlxuICAgICAgLSBwYXJhZ3JhcGg6IG1hbmRhIHVzZXJcbiAgICAgIC0gdGV4dDog74ipXG4gIC0gbmF2aWdhdGlvbiBcIlRvcGJhciBNZW51XCI6XG4gICAgLSBsaXN0OlxuICAgICAgLSBsaXN0aXRlbTogVXNlciBNYW5hZ2VtZW50IO+KglxuICAgICAgLSBsaXN0aXRlbTogSm9iIO+KglxuICAgICAgLSBsaXN0aXRlbTogT3JnYW5pemF0aW9uIO+KglxuICAgICAgLSBsaXN0aXRlbTogUXVhbGlmaWNhdGlvbnMg74qCXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJOYXRpb25hbGl0aWVzXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiQ29ycG9yYXRlIEJyYW5kaW5nXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTogQ29uZmlndXJhdGlvbiDvioJcbiAgICAgIC0gYnV0dG9uIFwi75mOXCJcbi0gaGVhZGluZyBcIkFkZCBKb2IgVGl0bGVcIiBbbGV2ZWw9Nl1cbi0gc2VwYXJhdG9yXG4tIHRleHQ6IEpvYiBUaXRsZSpcbi0gdGV4dGJveFxuLSB0ZXh0OiBKb2IgRGVzY3JpcHRpb25cbi0gdGV4dGJveCBcIlR5cGUgZGVzY3JpcHRpb24gaGVyZVwiXG4tIHRleHQ6IEpvYiBTcGVjaWZpY2F0aW9uXG4tIGJ1dHRvbiBcIkNob29zZSBGaWxlXCJcbi0gdGV4dDogQnJvd3NlIE5vIGZpbGUgY2hvc2VuIO+Yg1xuLSBwYXJhZ3JhcGg6IEFjY2VwdHMgdXAgdG8gMU1CXG4tIHRleHQ6IO+TiiBOb3RlXG4tIHRleHRib3ggXCJBZGQgbm90ZVwiXG4tIHNlcGFyYXRvclxuLSBwYXJhZ3JhcGg6IFwiKiBSZXF1aXJlZFwiXG4tIGJ1dHRvbiBcIkNhbmNlbFwiXG4tIGJ1dHRvbiBcIlNhdmVcIlxuLSBwYXJhZ3JhcGg6IE9yYW5nZUhSTSBPUyA1Ljdcbi0gcGFyYWdyYXBoOlxuICAtIHRleHQ6IMKpIDIwMDUgLSAyMDI1XG4gIC0gbGluayBcIk9yYW5nZUhSTSwgSW5jXCI6XG4gICAgLSAvdXJsOiBodHRwOi8vd3d3Lm9yYW5nZWhybS5jb21cbiAgLSB0ZXh0OiAuIEFsbCByaWdodHMgcmVzZXJ2ZWQuIn0="
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Ashwini Playwright\\tests\\Addjobtitle(env).spec.js",
+                        "column": 98,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5aeb3738ba283744b820-bd17ad20c921ec5be952",
+              "file": "Addjobtitle(env).spec.js",
+              "line": 5,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-06-11T16:09:48.669Z",
+    "duration": 295202.732,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
