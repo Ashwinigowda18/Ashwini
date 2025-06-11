@@ -1,5 +1,5 @@
 const { test, expect } = require('playwright/test');
-import data from "../../Ashwini Playwright/testData/Addjobtitle.json"
+import data from "../../testData/Addjobtitle.json"
 
 test.describe('Add Job Title Feature', () => {
     test('should add a new job title successfully', async ({ page }) => {
