@@ -81,7 +81,7 @@
 // console.log(true||false)  //o/p: true
 // console.log(true||false)  //o/p: true
 // console.log(true||true)  //o/p: true
-// console.log((5>3)&&(8<9)) //o/p: true
+//console.log((5>9)||(10<9)) //o/p: false
 
 //NOT(!)
 // console.log(!(true))  //false
@@ -141,12 +141,12 @@
 // console.log(a**b)  //32
 
 //5.Conditional operator/Ternary operator:
-value1="pink"
-value2="blue"
-m=5=="5"? value1:value2
-console.log(m)  //o/p:pink
-m=5==="5"? value1:value2
-console.log(m)  //o/p:blue
+// value1="pink"
+// value2="blue"
+// m=5=="5"? value1:value2
+// console.log(m)  //o/p:pink
+// m=5==="5"? value1:value2
+// console.log(m)  //o/p:blue
 
 
 

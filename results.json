@@ -75,6 +75,22 @@
         "metadata": {
           "actualWorkers": 1
         },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Ashwini Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Ashwini Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "Microsoft Edge",
         "name": "Microsoft Edge",
         "testDir": "D:/Ashwini Playwright/tests",
@@ -110,8 +126,8 @@
   },
   "suites": [
     {
-      "title": "Env File\\Addemployee(env).spec.js",
-      "file": "Env File/Addemployee(env).spec.js",
+      "title": "PIM\\checkboxes.spec.js",
+      "file": "PIM/checkboxes.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
@@ -128,15 +144,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 11,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 58765,
+                  "duration": 10446,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-12T05:59:55.730Z",
+                  "startTime": "2025-06-16T20:21:03.136Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -144,9 +160,9 @@
               "status": "expected"
             }
           ],
-          "id": "05701d402cbecd76f91a-98fb6281d259965a10a5",
-          "file": "Env File/Addemployee(env).spec.js",
-          "line": 7,
+          "id": "41a4b2ef1bf6b1af6b7e-868672047992c803e6f6",
+          "file": "PIM/checkboxes.spec.js",
+          "line": 5,
           "column": 5
         },
         {
@@ -162,15 +178,15 @@
               "projectName": "Microsoft Edge",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 12,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 44774,
+                  "duration": 15064,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-12T06:01:10.394Z",
+                  "startTime": "2025-06-16T20:21:16.347Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -178,9 +194,9 @@
               "status": "expected"
             }
           ],
-          "id": "05701d402cbecd76f91a-d4def7f599dd5eef5cc4",
-          "file": "Env File/Addemployee(env).spec.js",
-          "line": 7,
+          "id": "41a4b2ef1bf6b1af6b7e-b06eb685e5b8f99f021b",
+          "file": "PIM/checkboxes.spec.js",
+          "line": 5,
           "column": 5
         },
         {
@@ -196,15 +212,15 @@
               "projectName": "Google Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 13,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 27901,
+                  "duration": 13688,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-12T06:02:24.711Z",
+                  "startTime": "2025-06-16T20:21:33.934Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -212,9 +228,9 @@
               "status": "expected"
             }
           ],
-          "id": "05701d402cbecd76f91a-486d8c9600d11fe6ae73",
-          "file": "Env File/Addemployee(env).spec.js",
-          "line": 7,
+          "id": "41a4b2ef1bf6b1af6b7e-f1572144a28fe5fbc462",
+          "file": "PIM/checkboxes.spec.js",
+          "line": 5,
           "column": 5
         }
       ]
@@ -222,8 +238,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-12T05:59:46.992Z",
-    "duration": 194214.645,
+    "startTime": "2025-06-16T20:20:51.452Z",
+    "duration": 56411.983999999706,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,
