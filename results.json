@@ -6,7 +6,7 @@
     "fullyParallel": true,
     "globalSetup": null,
     "globalTeardown": null,
-    "globalTimeout": 0,
+    "globalTimeout": 3600000,
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
@@ -126,48 +126,14 @@
   },
   "suites": [
     {
-      "title": "PIM\\checkboxes.spec.js",
-      "file": "PIM/checkboxes.spec.js",
+      "title": "PIM\\data driven2.spec.js",
+      "file": "PIM/data driven2.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Verify Add Employee",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 11,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 10446,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-06-16T20:21:03.136Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41a4b2ef1bf6b1af6b7e-868672047992c803e6f6",
-          "file": "PIM/checkboxes.spec.js",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "Verify Add Employee",
-          "ok": true,
+          "title": "example for looping test data - DDT - Ashwini",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -180,27 +146,179 @@
                 {
                   "workerIndex": 12,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 15064,
+                  "status": "timedOut",
+                  "duration": 60030,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\Ashwini Playwright\\tests\\PIM\\data driven2.spec.js",
+                        "column": 52,
+                        "line": 27
+                      },
+                      "message": "Error: locator.fill: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\\'First Name\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//a[@class='oxd-topbar-body-nav-tab-item'])[2]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 26 |\u001b[39m     \u001b[36mlet\u001b[39m randomtext \u001b[33m=\u001b[39m (\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mrandom() \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mtoString(\u001b[35m36\u001b[39m)\u001b[33m.\u001b[39msubstring(\u001b[35m7\u001b[39m)\u001b[33m;\u001b[39m \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"input[name='First Name']\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployeelist\u001b[39m[\u001b[33mEmployee\u001b[39m] \u001b[33m+\u001b[39m randomtext)\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"input[name='Last Name']\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\".\"\u001b[39m)\n \u001b[90m 29 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 30 |\u001b[39m     \u001b[90m//await expect(page).toHaveURL(\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/242\")\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Ashwini Playwright\\tests\\PIM\\data driven2.spec.js:27:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-18T03:33:39.956Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "_error-context",
+                      "contentType": "application/json",
+                      "body": "eyJwYWdlU25hcHNob3QiOiItIGNvbXBsZW1lbnRhcnk6XG4gIC0gbmF2aWdhdGlvbiBcIlNpZGVwYW5lbFwiOlxuICAgIC0gbGluayBcImNsaWVudCBicmFuZCBiYW5uZXJcIjpcbiAgICAgIC0gL3VybDogaHR0cHM6Ly93d3cub3JhbmdlaHJtLmNvbS9cbiAgICAgIC0gaW1nIFwiY2xpZW50IGJyYW5kIGJhbm5lclwiXG4gICAgLSB0ZXh0Ym94IFwiU2VhcmNoXCJcbiAgICAtIGJ1dHRvbiBcIu+KhFwiXG4gICAgLSBzZXBhcmF0b3JcbiAgICAtIGxpc3Q6XG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJBZG1pblwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvYWRtaW4vdmlld0FkbWluTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJQSU1cIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BpbS92aWV3UGltTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJMZWF2ZVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvbGVhdmUvdmlld0xlYXZlTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJUaW1lXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC90aW1lL3ZpZXdUaW1lTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJSZWNydWl0bWVudFwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvcmVjcnVpdG1lbnQvdmlld1JlY3J1aXRtZW50TW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJNeSBJbmZvXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9waW0vdmlld015RGV0YWlsc1xuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUGVyZm9ybWFuY2VcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BlcmZvcm1hbmNlL3ZpZXdQZXJmb3JtYW5jZU1vZHVsZVxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiRGFzaGJvYXJkXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9kYXNoYm9hcmQvaW5kZXhcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkRpcmVjdG9yeVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvZGlyZWN0b3J5L3ZpZXdEaXJlY3RvcnlcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIk1haW50ZW5hbmNlXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9tYWludGVuYW5jZS92aWV3TWFpbnRlbmFuY2VNb2R1bGVcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkNsYWltXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9jbGFpbS92aWV3Q2xhaW1Nb2R1bGVcbiAgICAgICAgICAtIGltZ1xuICAgICAgICAgIC0gdGV4dDogQ2xhaW1cbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkJ1enpcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL2J1enovdmlld0J1enpcbi0gYmFubmVyOlxuICAtIGhlYWRpbmcgXCJQSU1cIiBbbGV2ZWw9Nl1cbiAgLSBsaW5rIFwiVXBncmFkZVwiOlxuICAgIC0gL3VybDogaHR0cHM6Ly9vcmFuZ2Vocm0uY29tL29wZW4tc291cmNlL3VwZ3JhZGUtdG8tYWR2YW5jZWRcbiAgICAtIGJ1dHRvbiBcIlVwZ3JhZGVcIlxuICAtIGxpc3Q6XG4gICAgLSBsaXN0aXRlbTpcbiAgICAgIC0gaW1nIFwicHJvZmlsZSBwaWN0dXJlXCJcbiAgICAgIC0gcGFyYWdyYXBoOiBKb2tvdyBaR1FiemVaYWdhXG4gICAgICAtIHRleHQ6IO+IqVxuICAtIG5hdmlnYXRpb24gXCJUb3BiYXIgTWVudVwiOlxuICAgIC0gbGlzdDpcbiAgICAgIC0gbGlzdGl0ZW06IENvbmZpZ3VyYXRpb24g74qCXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJFbXBsb3llZSBMaXN0XCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiQWRkIEVtcGxveWVlXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUmVwb3J0c1wiOlxuICAgICAgICAgIC0gL3VybDogXCIjXCJcbiAgICAgIC0gYnV0dG9uIFwi75mOXCJcbi0gaGVhZGluZyBcIkFkZCBFbXBsb3llZVwiIFtsZXZlbD02XVxuLSBzZXBhcmF0b3Jcbi0gYnV0dG9uIFwiQ2hvb3NlIEZpbGVcIlxuLSBpbWcgXCJwcm9maWxlIHBpY3R1cmVcIlxuLSBidXR0b24gXCLvk75cIlxuLSBwYXJhZ3JhcGg6IFwiQWNjZXB0cyBqcGcsIC5wbmcsIC5naWYgdXAgdG8gMU1CLiBSZWNvbW1lbmRlZCBkaW1lbnNpb25zOiAyMDBweCBYIDIwMHB4XCJcbi0gdGV4dDogRW1wbG95ZWUgRnVsbCBOYW1lKlxuLSB0ZXh0Ym94IFwiRmlyc3QgTmFtZVwiXG4tIHRleHRib3ggXCJNaWRkbGUgTmFtZVwiXG4tIHRleHRib3ggXCJMYXN0IE5hbWVcIlxuLSB0ZXh0OiBFbXBsb3llZSBJZFxuLSB0ZXh0Ym94OiBcIjA1MTZcIlxuLSBzZXBhcmF0b3Jcbi0gcGFyYWdyYXBoOiBDcmVhdGUgTG9naW4gRGV0YWlsc1xuLSBjaGVja2JveFxuLSBzZXBhcmF0b3Jcbi0gcGFyYWdyYXBoOiBcIiogUmVxdWlyZWRcIlxuLSBidXR0b24gXCJDYW5jZWxcIlxuLSBidXR0b24gXCJTYXZlXCJcbi0gcGFyYWdyYXBoOiBPcmFuZ2VIUk0gT1MgNS43XG4tIHBhcmFncmFwaDpcbiAgLSB0ZXh0OiDCqSAyMDA1IC0gMjAyNVxuICAtIGxpbmsgXCJPcmFuZ2VIUk0sIEluY1wiOlxuICAgIC0gL3VybDogaHR0cDovL3d3dy5vcmFuZ2Vocm0uY29tXG4gIC0gdGV4dDogLiBBbGwgcmlnaHRzIHJlc2VydmVkLiJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-288e68911a07788239ca",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Ganavi",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Microsoft Edge",
+              "projectName": "Microsoft Edge",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60037,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\Ashwini Playwright\\tests\\PIM\\data driven2.spec.js",
+                        "column": 52,
+                        "line": 27
+                      },
+                      "message": "Error: locator.fill: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\\'First Name\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//a[@class='oxd-topbar-body-nav-tab-item'])[2]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 26 |\u001b[39m     \u001b[36mlet\u001b[39m randomtext \u001b[33m=\u001b[39m (\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mrandom() \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mtoString(\u001b[35m36\u001b[39m)\u001b[33m.\u001b[39msubstring(\u001b[35m7\u001b[39m)\u001b[33m;\u001b[39m \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"input[name='First Name']\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployeelist\u001b[39m[\u001b[33mEmployee\u001b[39m] \u001b[33m+\u001b[39m randomtext)\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"input[name='Last Name']\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\".\"\u001b[39m)\n \u001b[90m 29 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button[type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 30 |\u001b[39m     \u001b[90m//await expect(page).toHaveURL(\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/242\")\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Ashwini Playwright\\tests\\PIM\\data driven2.spec.js:27:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-18T03:34:44.753Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "_error-context",
+                      "contentType": "application/json",
+                      "body": "eyJwYWdlU25hcHNob3QiOiItIGNvbXBsZW1lbnRhcnk6XG4gIC0gbmF2aWdhdGlvbiBcIlNpZGVwYW5lbFwiOlxuICAgIC0gbGluayBcImNsaWVudCBicmFuZCBiYW5uZXJcIjpcbiAgICAgIC0gL3VybDogaHR0cHM6Ly93d3cub3JhbmdlaHJtLmNvbS9cbiAgICAgIC0gaW1nIFwiY2xpZW50IGJyYW5kIGJhbm5lclwiXG4gICAgLSB0ZXh0Ym94IFwiU2VhcmNoXCJcbiAgICAtIGJ1dHRvbiBcIu+KhFwiXG4gICAgLSBzZXBhcmF0b3JcbiAgICAtIGxpc3Q6XG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJBZG1pblwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvYWRtaW4vdmlld0FkbWluTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJQSU1cIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BpbS92aWV3UGltTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJMZWF2ZVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvbGVhdmUvdmlld0xlYXZlTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJUaW1lXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC90aW1lL3ZpZXdUaW1lTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJSZWNydWl0bWVudFwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvcmVjcnVpdG1lbnQvdmlld1JlY3J1aXRtZW50TW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJNeSBJbmZvXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9waW0vdmlld015RGV0YWlsc1xuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUGVyZm9ybWFuY2VcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BlcmZvcm1hbmNlL3ZpZXdQZXJmb3JtYW5jZU1vZHVsZVxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiRGFzaGJvYXJkXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9kYXNoYm9hcmQvaW5kZXhcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkRpcmVjdG9yeVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvZGlyZWN0b3J5L3ZpZXdEaXJlY3RvcnlcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIk1haW50ZW5hbmNlXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9tYWludGVuYW5jZS92aWV3TWFpbnRlbmFuY2VNb2R1bGVcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkNsYWltXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9jbGFpbS92aWV3Q2xhaW1Nb2R1bGVcbiAgICAgICAgICAtIGltZ1xuICAgICAgICAgIC0gdGV4dDogQ2xhaW1cbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkJ1enpcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL2J1enovdmlld0J1enpcbi0gYmFubmVyOlxuICAtIGhlYWRpbmcgXCJQSU1cIiBbbGV2ZWw9Nl1cbiAgLSBsaW5rIFwiVXBncmFkZVwiOlxuICAgIC0gL3VybDogaHR0cHM6Ly9vcmFuZ2Vocm0uY29tL29wZW4tc291cmNlL3VwZ3JhZGUtdG8tYWR2YW5jZWRcbiAgICAtIGJ1dHRvbiBcIlVwZ3JhZGVcIlxuICAtIGxpc3Q6XG4gICAgLSBsaXN0aXRlbTpcbiAgICAgIC0gaW1nIFwicHJvZmlsZSBwaWN0dXJlXCJcbiAgICAgIC0gcGFyYWdyYXBoOiBKb2tvdyBaR1FiemVaYWdhXG4gICAgICAtIHRleHQ6IO+IqVxuICAtIG5hdmlnYXRpb24gXCJUb3BiYXIgTWVudVwiOlxuICAgIC0gbGlzdDpcbiAgICAgIC0gbGlzdGl0ZW06IENvbmZpZ3VyYXRpb24g74qCXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJFbXBsb3llZSBMaXN0XCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiQWRkIEVtcGxveWVlXCI6XG4gICAgICAgICAgLSAvdXJsOiBcIiNcIlxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUmVwb3J0c1wiOlxuICAgICAgICAgIC0gL3VybDogXCIjXCJcbiAgICAgIC0gYnV0dG9uIFwi75mOXCJcbi0gaGVhZGluZyBcIkFkZCBFbXBsb3llZVwiIFtsZXZlbD02XVxuLSBzZXBhcmF0b3Jcbi0gYnV0dG9uIFwiQ2hvb3NlIEZpbGVcIlxuLSBpbWcgXCJwcm9maWxlIHBpY3R1cmVcIlxuLSBidXR0b24gXCLvk75cIlxuLSBwYXJhZ3JhcGg6IFwiQWNjZXB0cyBqcGcsIC5wbmcsIC5naWYgdXAgdG8gMU1CLiBSZWNvbW1lbmRlZCBkaW1lbnNpb25zOiAyMDBweCBYIDIwMHB4XCJcbi0gdGV4dDogRW1wbG95ZWUgRnVsbCBOYW1lKlxuLSB0ZXh0Ym94IFwiRmlyc3QgTmFtZVwiXG4tIHRleHRib3ggXCJNaWRkbGUgTmFtZVwiXG4tIHRleHRib3ggXCJMYXN0IE5hbWVcIlxuLSB0ZXh0OiBFbXBsb3llZSBJZFxuLSB0ZXh0Ym94OiBcIjA1MTdcIlxuLSBzZXBhcmF0b3Jcbi0gcGFyYWdyYXBoOiBDcmVhdGUgTG9naW4gRGV0YWlsc1xuLSBjaGVja2JveFxuLSBzZXBhcmF0b3Jcbi0gcGFyYWdyYXBoOiBcIiogUmVxdWlyZWRcIlxuLSBidXR0b24gXCJDYW5jZWxcIlxuLSBidXR0b24gXCJTYXZlXCJcbi0gcGFyYWdyYXBoOiBPcmFuZ2VIUk0gT1MgNS43XG4tIHBhcmFncmFwaDpcbiAgLSB0ZXh0OiDCqSAyMDA1IC0gMjAyNVxuICAtIGxpbmsgXCJPcmFuZ2VIUk0sIEluY1wiOlxuICAgIC0gL3VybDogaHR0cDovL3d3dy5vcmFuZ2Vocm0uY29tXG4gIC0gdGV4dDogLiBBbGwgcmlnaHRzIHJlc2VydmVkLiJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-d17be323e5b7210a256e",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Sanjana",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Microsoft Edge",
+              "projectName": "Microsoft Edge",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-16T20:21:16.347Z",
+                  "startTime": "2025-06-18T03:35:52.383Z",
                   "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
-          "id": "41a4b2ef1bf6b1af6b7e-b06eb685e5b8f99f021b",
-          "file": "PIM/checkboxes.spec.js",
-          "line": 5,
+          "id": "3fe74aa666aa55ad544e-e501c4155a4abbbaeb3b",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
           "column": 5
         },
         {
-          "title": "Verify Add Employee",
+          "title": "example for looping test data - DDT - Rohan",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Microsoft Edge",
+              "projectName": "Microsoft Edge",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-6486fc0d41b90277f09f",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Sandeep",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Microsoft Edge",
+              "projectName": "Microsoft Edge",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-e847efcec877959e8b18",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Ashwini",
           "ok": true,
           "tags": [],
           "tests": [
@@ -210,27 +328,93 @@
               "expectedStatus": "passed",
               "projectId": "Google Chrome",
               "projectName": "Google Chrome",
-              "results": [
-                {
-                  "workerIndex": 13,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 13688,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-06-16T20:21:33.934Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "41a4b2ef1bf6b1af6b7e-f1572144a28fe5fbc462",
-          "file": "PIM/checkboxes.spec.js",
-          "line": 5,
+          "id": "3fe74aa666aa55ad544e-91fec7de0950bc4f6562",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Ganavi",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-3b0a81ef59eabf3e3756",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Sanjana",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-7c2027fbfc73140f198e",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Rohan",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-1ef9239cd46035cd7152",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "example for looping test data - DDT - Sandeep",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "3fe74aa666aa55ad544e-1ef2f389f88565e7089a",
+          "file": "PIM/data driven2.spec.js",
+          "line": 16,
           "column": 5
         }
       ]
@@ -238,11 +422,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-16T20:20:51.452Z",
-    "duration": 56411.983999999706,
-    "expected": 3,
-    "skipped": 0,
-    "unexpected": 0,
+    "startTime": "2025-06-18T03:33:34.820Z",
+    "duration": 160304.96999999974,
+    "expected": 0,
+    "skipped": 8,
+    "unexpected": 2,
     "flaky": 0
   }
 }

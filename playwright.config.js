@@ -13,7 +13,9 @@ require('dotenv').config()
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
-export default defineConfig({
+module.exports = defineConfig({
+
+  globalTimeout: 60 * 60 *1000,  // 3600000
 
   timeout : 60000,
   expect: {
