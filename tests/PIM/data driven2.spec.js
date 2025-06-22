@@ -1,35 +1,42 @@
 import { test, expect } from '@playwright/test';
 
-const Employeelist = {
 
-    Employee1: "Ashwini",
-    Employee2: "Ganavi",
-    Employee3: "Sanjana",
-    Employee4: "Rohan",
-    Employee5: "Sandeep",
+
+const employees = {
+
+   emp1 : {
+           firstname: "Ashwini",
+		   lastname: "N"
+          
+		  },
+	emp2 : {
+           firstname: "Swathi",
+		   lastname: "Ravi"
+          
+		  }
 
 }
 
-for (let Employee in Employeelist) {
+for (let employee in employees ){
 
-    
-test(`example for looping test data - DDT - ${Employeelist[Employee]}`, async ({ page }) => {
+    test(`Add employee test - ${employee} `, async ({ page }) => {
+ 
+  await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  await page.getByRole('textbox', { name: 'Username' }).click();
+  await page.locator('//input[@name="username"]').fill("Admin");
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).fill("admin123");
+  await page.getByRole('button', { name: 'Login' }).click();
+  await page.getByRole('link', { name: 'PIM' }).click();
+  await page.getByRole("link", { name: 'Add Employee' }).click();
+  await page.getByRole('textbox', { name: 'First Name' }).click();
+  await page.getByRole('textbox', { name: 'First Name' }).fill(employees[employee].firstname);
+  await page.getByRole('textbox', { name: 'Last Name' }).click();
+  await page.getByRole('textbox', { name: 'Last Name' }).fill(employees[employee].lastname);
+  await page.getByRole('button', { name: 'Save' }).click();
+  await expect(page.getByRole('heading', { name: 'Personal Details' })).toBeVisible();
+
+});
 
 
-    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-    await page.locator(`input[name='username']`).fill("Admin")
-    await page.locator("input[type='password']").fill("admin123")
-    await page.locator("button[type='submit']").click()
-    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
-    await page.locator("(//span[contains(@class,'oxd-text oxd-text--span')])[2]").click()
-    await page.locator("(//a[@class='oxd-topbar-body-nav-tab-item'])[2]").click()
-    let randomtext = (Math.random() + 1).toString(36).substring(7); 
-    await page.locator("input[name='First Name']").fill(Employeelist[Employee] + randomtext)
-    await page.locator("input[name='Last Name']").fill(".")
-    await page.locator("button[type='submit']").click()
-    //await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/242")
-
-
-}) 
-
-} 
+}

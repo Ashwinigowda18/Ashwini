@@ -51,6 +51,29 @@
 // Leave
 // loop ends
 
+menuitems={
+
+    menu1:"Admin",
+    menu2:"PIM",
+    menu3:"Leave"
+}
+
+for(let item in menuitems){
+    console.log("loop starts")
+    console.log(item)
+     console.log("loop ends")
+}
+// o/p:
+// loop starts
+// menu1
+// loop ends
+// loop starts
+// menu2
+// loop ends
+// loop starts
+// menu3
+// loop ends
+
 //data driven testing:
 //consider 3 job titles:
 
@@ -59,12 +82,11 @@
 // COO1  
 
 //consider:
-str1="pink"
-str2="purple"
-//str3="pink and purple are colours" //here we want to assign str1 and str2 to str3
-str3=`${str1} and ${str2} are colours`
-console.log(str3)        //o/p: pink and purple are colours
-
+// str1="pink"
+// str2="purple"
+// //str3="pink and purple are colours" //here we want to assign str1 and str2 to str3
+// str3=`${str1} and ${str2} are colours`
+// console.log(str3)        //o/p: pink and purple are colours
 
 
 
