@@ -1,5 +1,3 @@
-const { hash } = require("crypto")
-
 console.log("5"-3)  //2
 console.log("ashu"-6)  //NaN
 console.log("55"+undefined) //55undefined
